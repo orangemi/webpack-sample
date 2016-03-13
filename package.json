@@ -1,18 +1,20 @@
 {
-  "name": "madpj-client",
+  "name": "webpack-sample",
   "version": "0.1.0",
   "description": "",
-  "main": "app.js",
+  "main": "src/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "./node_modules/.bin/webpack-dev-server --config tools/webpack.dev.js",
+    "build": "./node_modules/.bin/webpack -p --config tools/webpack.build.js"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-util": "^3.0.7",
-    "toa": "^1.4.1",
-    "toa-static": "^0.5.0",
-    "webpack": "^1.12.14"
+    "css-loader": "^0.23.1",
+    "html-loader": "^0.4.3",
+    "vue": "^1.0.17",
+    "vue-html-loader": "^1.2.0",
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1"
   }
 }

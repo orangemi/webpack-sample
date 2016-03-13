@@ -1,2 +1,5 @@
+/dist
+/debug
 /node_modules
+*.log
 .DS_Store
