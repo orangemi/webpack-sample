@@ -1,0 +1,18 @@
+{
+  "name": "madpj-client",
+  "version": "0.1.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-util": "^3.0.7",
+    "toa": "^1.4.1",
+    "toa-static": "^0.5.0",
+    "webpack": "^1.12.14"
+  }
+}
