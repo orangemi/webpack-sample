@@ -6,7 +6,7 @@ const UglifyJsPlugin = webpack.optimize.UglifyJsPlugin
 module.exports = {
   entry: {
     main: './src/main.js',
-    vendor: ['vue']
+    vendor: ['vue', 'moment']
   },
   output: {
     path: './dist',

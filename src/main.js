@@ -1,5 +1,6 @@
 var Vue = require('vue')
 var HTML = require('./main.html')
+var calendar = require('./calendar')
 
 var app = new Vue({
   el: '#app',
@@ -9,6 +10,9 @@ var app = new Vue({
     todos: [
       { text: 'Add some todos' }
     ]
+  },
+  components: {
+    calendar: calendar
   },
   methods: {
     addTodo: function () {
