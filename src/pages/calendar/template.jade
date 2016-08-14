@@ -1,0 +1,11 @@
+table.holiday-calendar
+  tr
+    td.weekday Sun
+    td.weekday Mon
+    td.weekday Tue
+    td.weekday Wed
+    td.weekday Thu
+    td.weekday Fri
+    td.weekday Sat
+    td.day(v-for="day in days")
+      span {{ day.day }}
