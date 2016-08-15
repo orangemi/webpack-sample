@@ -1,11 +1,21 @@
-table.holiday-calendar
-  tr
-    td.weekday Sun
-    td.weekday Mon
-    td.weekday Tue
-    td.weekday Wed
-    td.weekday Thu
-    td.weekday Fri
-    td.weekday Sat
-    td.day(v-for="day in days")
-      span {{ day.day }}
+div
+  div
+    button(v-on:click="goPrevMonth") Prev
+    span {{ currentYear }} / {{ currentMonth }}
+    button(v-on:click="goNextMonth") Next
+  table
+    tr
+      td Sunday
+      td Monday
+      td Tuesday
+      td Wednesday
+      td Thursday
+      td Friday
+      td Saturday
+    tr.week(v-for="week in weeks")
+      td(
+        v-for="weekday in week"
+        class="weekday"
+        v-bind:class="{prev: weekday.isPrevMonth, next: weekday.isNextMonth, holiday: weekday.isHoliday}"
+        v-on:click="saveHoliday(weekday, $event)")
+        {{ weekday.day }}

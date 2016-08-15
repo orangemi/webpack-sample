@@ -27,6 +27,11 @@ router.map({
       resolve(require('pages/calendar'))
     }
   },
+  '/bank': {
+    component: function (resolve) {
+      resolve(require('pages/bank-list'))
+    }
+  },
   '/*any': {
     component: {
       template: '<h3>Not found</h3>'

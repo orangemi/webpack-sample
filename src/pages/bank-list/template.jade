@@ -1,0 +1,58 @@
+div
+  div.nav
+    button Prev
+    span {{ page }}
+    button Next
+  div.search
+    input(v-model="searchBankName" placeHolder="Bank Name ...")
+    button(@click="searchBank") Search
+  table
+    tr
+      th ID
+      th rate
+      th updateTime
+      th name
+      th account_name
+      th account_number
+      th bank_name
+      th bank_number
+      th Action
+    tr()
+      td
+        input(disabled value="NEW")
+      td
+        input(v-model="newBank.rate")
+      td
+        input(v-model="newBank.update_time")
+      td
+        input(v-model="newBank.name")
+      td
+        input(v-model="newBank.account_name")
+      td
+        input(v-model="newBank.account_number")
+      td
+        input(v-model="newBank.bank_name")
+      td
+        input(v-model="newBank.bank_number")
+      td
+        button(@click="saveBank(newBank)") Save
+    tr
+    tr(v-for="bank in banks")
+      td
+        input(v-model="bank.id" disabled)
+      td
+        input(v-model="bank.rate")
+      td
+        input(v-model="bank.update_time")
+      td
+        input(v-model="bank.name")
+      td
+        input(v-model="bank.account_name")
+      td
+        input(v-model="bank.account_number")
+      td
+        input(v-model="bank.bank_name")
+      td
+        input(v-model="bank.bank_number")
+      td
+        button(@click="saveBank(bank)") Save

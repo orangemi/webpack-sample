@@ -9,7 +9,7 @@ const DefinePlugin = webpack.DefinePlugin
 
 module.exports = {
   entry: {
-    main: './src',
+    router: './src',
     vendor: ['vue', 'moment', 'vue-resource', 'vue-router', 'lodash']
   },
   output: {
